@@ -14,13 +14,13 @@ public interface ManufacturerGateway {
     List<ManufacturerDto> getManufacturerList();
 
     @GetMapping("/{manufacturerId}")
-    ResponseEntity<?> getManufacturer(@PathVariable("manufacturerId") Long id);
+    ResponseEntity<? extends ManufacturerDto> getManufacturer(@PathVariable("manufacturerId") Long id);
 
     @PostMapping
-    ResponseEntity<?> handlePost(@Validated @RequestBody ManufacturerDto manufacturerDto);
+    ResponseEntity<? extends ManufacturerDto> handlePost(@Validated @RequestBody ManufacturerDto manufacturerDto);
 
     @PutMapping("/{manufacturerId}")
-    ResponseEntity<?> handleUpdate(@PathVariable("manufacturerId") Long id,
+    ResponseEntity<? extends ManufacturerDto> handleUpdate(@PathVariable("manufacturerId") Long id,
                                           @Validated @RequestBody ManufacturerDto manufacturerDto);
 
     @DeleteMapping("/{manufacturerId}")

@@ -30,4 +30,5 @@ public class ProductDto {
     private Status status;
     private String manufacturer;
     private Set<CategoryDto> categories;
+    private String category;
 }

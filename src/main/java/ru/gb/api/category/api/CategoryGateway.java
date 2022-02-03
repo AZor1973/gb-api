@@ -14,13 +14,13 @@ public interface CategoryGateway {
     List<CategoryDto> getCategoryList();
 
     @GetMapping("/{categoryId}")
-    ResponseEntity<?> getCategory(@PathVariable("categoryId") Long id);
+    ResponseEntity<? extends CategoryDto> getCategory(@PathVariable("categoryId") Long id);
 
     @PostMapping
-    ResponseEntity<?> handlePost(@Validated @RequestBody CategoryDto categoryDto);
+    ResponseEntity<? extends CategoryDto> handlePost(@Validated @RequestBody CategoryDto categoryDto);
 
     @PutMapping("/{categoryId}")
-    ResponseEntity<?> handleUpdate(@PathVariable("categoryId") Long id,
+    ResponseEntity<? extends CategoryDto> handleUpdate(@PathVariable("categoryId") Long id,
                                    @Validated @RequestBody CategoryDto categoryDto);
 
     @DeleteMapping("/{categoryId}")

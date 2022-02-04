@@ -14,13 +14,13 @@ public interface ProductGateway {
     List<ProductDto> getProductList();
 
     @GetMapping("/{productId}")
-    ResponseEntity<? extends ProductDto> getProduct(@PathVariable("productId") Long id);
+    ResponseEntity<?> getProduct(@PathVariable("productId") Long id);
 
     @PostMapping
-    ResponseEntity<? extends ProductDto> handlePost(@Validated @RequestBody ProductDto productDto);
+    ResponseEntity<?> handlePost(@Validated @RequestBody ProductDto productDto);
 
     @PutMapping("/{productId}")
-    ResponseEntity<? extends ProductDto> handleUpdate(@PathVariable("productId") Long id,
+    ResponseEntity<?> handleUpdate(@PathVariable("productId") Long id,
                                    @Validated @RequestBody ProductDto productDto);
 
     @DeleteMapping("/{productId}")

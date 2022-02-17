@@ -40,4 +40,13 @@ public class FeignConfiguration {
         return feignClientFactory.newFeignClient(OrderGateway.class, gbApiProperties.getEndpoint().getOrderUrl());
     }
 
+    @Bean
+    public UserGateway userGateway() {
+        return feignClientFactory.newFeignClient(UserGateway.class, gbApiProperties.getEndpoint().getUserUrl());
+    }
+
+    @Bean
+    public AuthenticationUserGateway AuthUserGateway() {
+        return feignClientFactory.newFeignClient(AuthenticationUserGateway.class, gbApiProperties.getEndpoint().getAuthUserUrl());
+    }
 }

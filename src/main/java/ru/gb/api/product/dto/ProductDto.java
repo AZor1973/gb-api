@@ -35,6 +35,5 @@ public class ProductDto {
     @NotNull
     private Status status;
     private String manufacturer;
-    private Set<CategoryDto> categories;
-    private String category;
+    private Set<String> categories;
 }

@@ -9,6 +9,8 @@ import ru.gb.api.category.api.CategoryGateway;
 import ru.gb.api.manufacturer.api.ManufacturerGateway;
 import ru.gb.api.order.api.OrderGateway;
 import ru.gb.api.product.api.ProductGateway;
+import ru.gb.api.security.api.AuthenticationUserGateway;
+import ru.gb.api.security.api.UserGateway;
 
 
 @Configuration

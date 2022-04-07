@@ -30,6 +30,7 @@ public class ProductDto {
     @JsonFormat(pattern="dd.MM.yyyy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
+
     private LocalDate manufactureDate;
     @NotNull
     private Status status;
